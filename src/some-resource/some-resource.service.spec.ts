@@ -1,15 +1,13 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { TestBed } from '@automock/jest';
 import { SomeResourceService } from './some-resource.service';
 
 describe('SomeResourceService', () => {
   let service: SomeResourceService;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [SomeResourceService],
-    }).compile();
+    const { unit } = TestBed.create(SomeResourceService).compile();
 
-    service = module.get<SomeResourceService>(SomeResourceService);
+    service = unit;
   });
 
   it('should be defined', () => {

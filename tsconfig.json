@@ -6,7 +6,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
+    "target": "es2022",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
@@ -16,6 +16,22 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "noFallthroughCasesInSwitch": false,
+    "allowJs": true,
+    "paths": {
+      "@controllers": ["src/controllers/"],
+      "@controllers/*": ["src/controllers/*"],
+      "@schemas": ["src/schemas/"],
+      "@schemas/*": ["src/schemas/*"],
+      "@services": ["src/services/"],
+      "@services/*": ["src/services/*"],
+      "@validators": ["src/validators/"],
+      "@validators/*": ["src/validators/*"],
+      "@core": ["src/core/"],
+      "@core/*": ["src/core/*"],
+      "@src": ["src/"],
+      "@src/*": ["src/*"]
+    }
+  },
+  "exclude": ["**/node_modules/*", "dist", "**/migrations/constants/*", "test"]
 }

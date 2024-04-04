@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { FactoryDbService } from 'src/core/MongoDbService/factoryDB.service';
 import { SomeResource } from './schemas/some-resource.schema';
+import { FactoryDbService } from '@core/services/factoryDB.service';
 
 @Injectable()
 export class SomeResourceService {
