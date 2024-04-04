@@ -2,7 +2,6 @@ import { Logger, Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { applicationConfig } from './core/config/app.config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { AnySchema } from './schemas/user.schema';
 import { SomeResourceModule } from './some-resource/some-resource.module';
 
 @Module({
